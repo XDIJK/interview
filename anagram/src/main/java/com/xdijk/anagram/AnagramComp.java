@@ -14,7 +14,7 @@ public class AnagramComp {
     public static void main(String[] args) throws Exception {
         // Check if each argument is even or rather dividible by 2 such as that we can
         // always form pairs and pass multiple arguments.
-        if (args.length % 2 == 0) {
+        if (args.length % 2 == 0 && args.length >= 2) {
             for (var i = 0; i < args.length; i = i + 2) {
                 System.out.println(anagram(args[i], args[i + 1]));
             }

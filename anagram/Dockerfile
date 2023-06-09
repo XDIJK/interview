@@ -1,4 +1,6 @@
 FROM openjdk:17
-COPY ./anagram/src/main/java/com/xdijk/anagram/AnagramComp.java .
-RUN javac AnagramComp.java
-CMD ["java", "AnagramComp"]
+COPY ./src/main/java/com/xdijk/anagram/AnagramComp.java /
+COPY ./scripts/docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
+

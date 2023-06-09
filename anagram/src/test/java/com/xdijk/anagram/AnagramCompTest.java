@@ -23,6 +23,10 @@ public class AnagramCompTest {
 
         var msg = exception.getMessage();
         assertTrue(msg.contains("Invalid number of arguments"));
+
+        exception = assertThrows(Exception.class, () -> AnagramComp.main(new String[0]));
+        msg = exception.getMessage();
+        assertTrue(msg.contains("Invalid number of arguments"));
     }
 
     /**
