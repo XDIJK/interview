@@ -19,7 +19,7 @@ public class AnagramComp {
                 System.out.println(anagram(args[i], args[i + 1]));
             }
         } else {
-            // (args.length + 2) - (args.length % 2) return closest in dividible by 2
+            // (args.length + 2) - (args.length % 2) return closest int in dividible by 2
             // greater than arg.length
             throw new Exception(String.format("Invalid number of arguments, amount provided: %s expected: %s",
                     args.length, (args.length + 2) - (args.length % 2)));

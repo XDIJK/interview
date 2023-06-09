@@ -1,5 +1,29 @@
 # Anagram
 
+## Build
+### requisites
+Java: openjdk version "17.0.7" 2023-04-18 LTS
+maven: version 3.9.1
+
+### Run
+To run the anagram comparison application you can simpy run:
+`mvn exec:java -Dexec.args="input1 input2 input3 input4" -X`
+
+Where `-Dexec.args=` can be any space seperated pairs of words.
+The code takes into consideration any other utf-8 characters however cannot promise that the shell used to execute it will do the same.
+
+### Run with docker
+For convience I've also included a dockerfile which can be run the following way:
+`docker build -t anagram-comp .`
+`docker run --rm anagram-comp [input ....args]`
+
+to remove the dockerfile run:
+`docker image rm anagram-comp`
+
+### Tests
+To run the unit tests run: `mvn test`
+
+
 ## Description
 Project to do the following task:
 
