@@ -1,6 +1,9 @@
 # Anagram
 
 ## Build
+
+It is assumed that `./interview/anagram` is the working directory.
+
 ### requisites
 Java: openjdk version "17.0.7" 2023-04-18 LTS  
 maven: version 3.9.1
