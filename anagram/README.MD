@@ -28,17 +28,20 @@ Initial thoughts for solving it, take two input strings split the string into a 
 
 Few things that came to mind.
 1. How to deal with special characters, are they allowed to be introduced? (This is seen on the wikipedia examples therefor will choose to do so.)
+    a. Should it only be punctiation or also other special characters such as
 2. What about something like substitution of character for numbers such as seen in leetspeak (https://en.wikipedia.org/wiki/Leet)
+3. What about non english languages
 
 ## Performance
+
 Planning to do the following for the initial solving.
 1. string toCharArray() = O(N)
-2. Arrays.Sort() = O(N log N)
-3. Array.Equals() = O(N)
+2. string toLowerCase() = O(N)
+3. regex replace all, not 100% confident but if the regex and replaceAll implementation is sane = O(N)
+4. Arrays.Sort() = O(N log N)
+5. Array.Equals() = O(N)
 
-Therefor the runtime complexity worstcase for this solution would be O(N log N).
-
-
+Therefor the worst case runtime complexity worst for this solution would be O(N log N).
 
 ## Build env
 Build via github codespaces, running their default codespaces container.
