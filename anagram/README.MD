@@ -9,6 +9,7 @@ Java: openjdk version "17.0.7" 2023-04-18 LTS
 maven: version 3.9.1
 
 ### Run
+The application expects input in pairs of 2, however does throw proper exception when passing 0 or any odd number of arguments.  
 To run the anagram comparison application you can simpy run:  
 `mvn exec:java -Dexec.args="input1 input2 input3 input4" -X`
 
@@ -18,7 +19,7 @@ The code takes into consideration any other utf-8 characters however cannot prom
 ### Run with docker
 For convience I've also included a dockerfile which can be run the following way:  
 `docker build -t anagram-comp .`  
-`docker run --rm anagram-comp [input ....args]`
+`docker run --rm anagram-comp [input ....args]` e.g `docker run --rm anagram-comp foo bar`
 
 to remove the dockerfile run:  
 `docker image rm anagram-comp`
