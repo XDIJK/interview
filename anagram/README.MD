@@ -43,5 +43,12 @@ Planning to do the following for the initial solving.
 
 Therefor the worst case runtime complexity worst for this solution would be O(N log N).
 
+### After googling performance
+Seems like a common approach is to have a bounded array (count = int[num_of_supported_chars]) where the byte val of a char in the string is taken as the index of count.
+Which incremented for the first input and decremented for second input, leading to the count array being balanced at all values being zero if the two inputs are anagrams.
+
+Since I decided to support utf-8 word characters this would be quite the memory hungry approach, however the solution is O(N) instead of O(N log N)
+Another approach is by reading both strings into their own HashMap<Character, Interger> and compare both. This solution is also O(N) but more memory hungry than the naive first solution (not including the reduntant var assignments I did)
+
 ## Build env
 Build via github codespaces, running their default codespaces container.
